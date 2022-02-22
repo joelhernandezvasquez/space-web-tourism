@@ -10,7 +10,6 @@ const App = () => {
   return (
     <>
 
-      HELLO REACT
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />

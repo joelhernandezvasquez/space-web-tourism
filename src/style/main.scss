@@ -1,6 +1,47 @@
 
+@import './home.scss';
+@import './components/mobileNavigation';
+@import './variables';
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
+
+.container{
+    margin:0 24px;
+
+}
+
+.lg-heading{
+    font-size:80px;
+    text-transform: uppercase;
+    color:$mainWhite;
+    line-height: 100px;
+    text-align: center;
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: normal;
+    margin:16px 0;
+}
+
+.sm-heading{
+ color:$mainPurple;
+ font-family:$secondaryFont;
+ font-size: 1rem;
+ text-transform: uppercase;
+ font-weight: 400;
+ text-align: center;
+ letter-spacing: 2.7px;
+}
+
+.body-text{
+    color:$mainPurple;
+    font-size: 0.9375rem;
+    font-family: $ternaryFont;
+    font-style: normal;
+    font-weight: normal;
+    text-align:center;
+    line-height: 25px;
 }
