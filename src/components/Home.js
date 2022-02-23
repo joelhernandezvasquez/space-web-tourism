@@ -1,5 +1,5 @@
 import React from 'react';
-import MobileNavigation from './MobileNavigation';
+import Navigation from './Navigation';
 import '../style/main.scss';
 
 
@@ -9,7 +9,7 @@ const Home = () => {
     <div className = "home_wrapper">
       <div className='container'>
 
-    <MobileNavigation/>
+   <Navigation/>
     <section className='home-page-hero-section'>
       <div className='left-col'>
         <h3 className='sm-heading'>so, you want to travel to</h3>
