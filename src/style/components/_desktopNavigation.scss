@@ -1,0 +1,45 @@
+
+@import '../variables';
+.desktop-nav{
+  
+    .desktop-menu-items{
+        width:450px;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(81.5485px);
+        padding:38px 46px 38px 46px;
+        display:flex;
+        align-items:center;
+        
+
+        li{
+            font-family:$secondaryFont;
+            margin:0 16px;
+
+            @media(min-width: $desktopScreen)
+            {
+                margin:0 32px;
+            }
+            
+        }
+        .link{
+            color:$mainWhite;
+            font-style:normal;
+            font-weight:normal;
+            font-size:0.875rem;
+            letter-spacing:2.3625px;
+            text-transform:uppercase;
+
+            @media(min-width: $desktopScreen)
+            {
+                font-size:1rem;
+            }
+        }
+
+      @media(min-width:$desktopScreen){
+          width: 830px;
+          padding-left:0;
+          padding-right: 0;
+          justify-content: center;
+      }
+    }
+}

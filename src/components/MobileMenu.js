@@ -13,10 +13,10 @@ const MobileMenu = ({open,closeMenu}) => {
         </div>
 
         <ul className='mobile-menu-items'>
-            <li> <Link className='link' to ="/"> 00 Home</Link></li>
-            <li> <Link className='link' to="/destination">01 Destination</Link></li>
-            <li> <Link className='link' to="/crew"> 02 Crew</Link></li>
-            <li> <Link className='link' to="/technology">03 Technology</Link></li>
+            <li> <Link className='link' to ="/"> <span class="bolder">00</span> Home</Link></li>
+            <li> <Link className='link' to="/destination"><span class="bolder">01</span> Destination</Link></li>
+            <li> <Link className='link' to="/crew"> <span class="bolder">02</span> Crew</Link></li>
+            <li> <Link className='link' to="/technology"><span class="bolder">03</span> Technology</Link></li>
         </ul>
     </div>
   )
