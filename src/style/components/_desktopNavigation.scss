@@ -6,15 +6,22 @@
         width:450px;
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(81.5485px);
-        padding:38px 46px 38px 46px;
+        padding:0 46px;
         display:flex;
         align-items:center;
         
 
         li{
             font-family:$secondaryFont;
-            margin:0 16px;
-
+           margin:0 16px ;
+           padding:36px 0;
+            cursor:pointer; 
+            border-bottom:3px solid transparent; 
+            transition:border 0.2s ease-in-out;
+           
+             &:hover{
+                border-bottom:3px solid rgba($mainWhite,0.5);
+             }
             @media(min-width: $desktopScreen)
             {
                 margin:0 32px;
@@ -28,6 +35,8 @@
             font-size:0.875rem;
             letter-spacing:2.3625px;
             text-transform:uppercase;
+          
+
 
             @media(min-width: $desktopScreen)
             {
@@ -41,5 +50,9 @@
           padding-right: 0;
           justify-content: center;
       }
+      .active-link{
+        border-bottom: 3px solid $mainWhite;
+    }
     }
 }
+

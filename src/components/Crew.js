@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Navigation from './Navigation'
 const Crew = () => {
   return (
-    <div>Crew</div>
+    <div style={{background:'black'}}>
+      crew
+       <Navigation/>
+    </div>
   )
 }
 

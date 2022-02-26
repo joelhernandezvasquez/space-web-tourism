@@ -13,7 +13,7 @@ const UseScreen = () => {
     window.addEventListener("resize",getScreenSize)
   
     return ()=>{
-        console.log("it was removed");
+      
         window.removeEventListener('resize',getScreenSize);
    }
   

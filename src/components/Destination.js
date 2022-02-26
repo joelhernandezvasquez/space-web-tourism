@@ -1,8 +1,12 @@
 import React from 'react'
+import Navigation from './Navigation'
 
 const Destination = () => {
   return (
-    <div>Destination</div>
+    <div style={{background:'black'}}>
+      destination
+       <Navigation/>
+    </div>
   )
 }
 
