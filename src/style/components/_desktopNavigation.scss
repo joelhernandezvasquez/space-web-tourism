@@ -1,7 +1,8 @@
 
 @import '../variables';
 .desktop-nav{
-  
+position:relative;
+ 
     .desktop-menu-items{
         width:450px;
         background: rgba(255, 255, 255, 0.04);
@@ -49,10 +50,44 @@
           padding-left:0;
           padding-right: 0;
           justify-content: center;
+          position:relative;
+          //border:2px solid red;
+         
+
+         
       }
       .active-link{
         border-bottom: 3px solid $mainWhite;
     }
+
+   
     }
+
+    @media(min-width:$desktopScreen){
+
+        &::before{
+            content:"";
+           
+                width: 473px;
+                height:1px;
+                position:absolute;
+              
+                top:50%;
+                left:-400px;
+                background:rgba($mainWhite,0.25);
+                mix-blend-mode: normal;
+                z-index:10;
+    
+                @media(min-width:1800px)
+                {
+                    width: 873px; 
+                    left:-800px;
+                }
+              
+        
+            
+        }
+    }
+    
 }
 

@@ -7,7 +7,9 @@ const DesktopNavigation = () => {
 
   const screenSize = UseScreen();
  const currentLocation = useLocation();
- const menuRef = useRef();
+ const menuRef = useRef(null);
+ const lineRef = useRef(null)
+ 
   const menuItems = [
     {
       id:0,
@@ -39,6 +41,7 @@ const DesktopNavigation = () => {
   useEffect(()=>{
 
    menuRef.current.addEventListener("mouseover",(e)=>{
+    
       if(e.target.classList.contains('active-link')){
         e.target.style.pointerEvents = 'none';
       }
@@ -46,8 +49,11 @@ const DesktopNavigation = () => {
 
   },[])
 
+ 
+
   return (
     <div className='desktop-nav'>
+    
     
     <ul  className='desktop-menu-items' ref={menuRef}>
            
@@ -58,7 +64,10 @@ const DesktopNavigation = () => {
              </li>
           )
         })}
+
+           
         </ul>
+       
     </div>
   )
 }
