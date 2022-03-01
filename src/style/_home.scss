@@ -1,41 +1,79 @@
 @import './variables';
-.home_wrapper{
-    background-image: url('../assets/home/background-home-mobile.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    height:100vh;
+.home_wrapper {
+  background-image: url('../assets/home/background-home-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 
-    @media(min-width:767px){
-        background-image: url('../assets/home/background-home-tablet.jpg');
-    }
-    @media(min-width:1430px)
-    {
-        background-image: url('../assets/home/background-home-desktop.jpg');
-    }
+  @media (min-width: $tableScreen) {
+    background-image: url('../assets/home/background-home-tablet.jpg');
+  }
+  @media (min-width: 1430px) {
+    background-image: url('../assets/home/background-home-desktop.jpg');
+  }
 }
 
-.home-page-hero-section{
-    margin:48px 0;
+.home-page-hero-section {
+  margin: 48px 0;
+
+  @media(min-width: $desktopScreen)
+  {
+     // border:2px solid red;
+      margin-top:180px;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:0 150px;
+
+      .left-col{
+          margin:0;
+         
+      }
     
+  }
 }
 
-.explore-btn{
-    
-    width:150px;
-    height:150px;
-    border-radius: 50%;
-    background:$mainWhite;
-    font-family: $primaryFont;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.25rem;
-    text-align: center;
-    color: $mainBlack;
-    text-transform: uppercase;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin:80px auto 48px auto;
+.left-col{
+   
+    @media(min-width: $tableScreen){
+    margin:106px auto 0 auto;
+    width:450px;
 
+    & > *{
+        margin-bottom: 24px;
+    }
+}
+}
+
+.explore-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: $mainWhite;
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  text-align: center;
+  color: $mainBlack;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px auto 48px auto;
+
+  @media(min-width: $tableScreen){
+    width: 242px;
+    height: 242px; 
+    font-size: 2rem;
+    margin: 156px auto 90px auto;
+  }
+
+  @media(min-width: $tableScreen){
+    width: 275px;
+    height: 275px; 
+   
+    margin: 0;
+  }
 }
