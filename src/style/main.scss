@@ -1,9 +1,11 @@
 
 @import './home.scss';
+@import './destination';
 @import './components/navigation';
 @import './components/mobileNavigation';
 @import './components/desktopNavigation';
 @import './variables';
+@import './helper';
 
 *{
     margin:0;

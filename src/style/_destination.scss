@@ -1,0 +1,13 @@
+@import './helper';
+
+.destination-wrapper{
+
+    @include getBackgroundImage('../assets/destination/background-destination-mobile.jpg');
+    
+    @media (min-width: $tableScreen) {
+        @include getBackgroundImage('../assets/destination/background-destination-tablet.jpg');
+      }
+      @media (min-width: 1430px) {
+        @include getBackgroundImage('../assets/destination/background-destination-desktop.jpg');
+      }
+}

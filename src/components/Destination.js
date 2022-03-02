@@ -3,9 +3,9 @@ import Navigation from './Navigation'
 
 const Destination = () => {
   return (
-    <div style={{background:'black'}}>
-      destination
-       <Navigation/>
+    <div className='destination-wrapper'>
+    
+       {/* <Navigation/> */}
     </div>
   )
 }

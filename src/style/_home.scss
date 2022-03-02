@@ -1,55 +1,47 @@
 @import './variables';
+@import './helper';
+
 .home_wrapper {
-  background-image: url('../assets/home/background-home-mobile.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+
+  @include getBackgroundImage('../assets/home/background-home-mobile.jpg');
 
   @media (min-width: $tableScreen) {
-    background-image: url('../assets/home/background-home-tablet.jpg');
+    @include getBackgroundImage('../assets/home/background-home-tablet.jpg');
   }
   @media (min-width: 1430px) {
-    background-image: url('../assets/home/background-home-desktop.jpg');
+    @include getBackgroundImage('../assets/home/background-home-desktop.jpg');
   }
 }
 
 .home-page-hero-section {
   margin: 48px 0;
- 
 
-  @media(min-width: $desktopScreen)
-  {
-      margin-top:180px;
-      display:flex;
-      align-items: center;
-      justify-content: space-between;
-      padding:0 150px;
+  @media (min-width: $desktopScreen) {
+    margin-top: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
 
-      .left-col{
-          margin:0;
-         
-      }
-    
-  }
-
-  @media(min-width: 2000px)
-  {
-  
-  padding:0 250px;
-  }
-}
-
-.left-col{
-   
-    @media(min-width: $tableScreen){
-    margin:106px auto 0 auto;
-    width:450px;
-
-    & > *{
-        margin-bottom: 24px;
+    .left-col {
+      margin: 0;
     }
+  }
+
+  @media (min-width: 2000px) {
+    padding: 0 250px;
+  }
 }
+
+.left-col {
+  @media (min-width: $tableScreen) {
+    margin: 106px auto 0 auto;
+    width: 450px;
+
+    & > * {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .explore-btn {
@@ -69,33 +61,32 @@
   justify-content: center;
   margin: 80px auto 48px auto;
 
-  @media(min-width: $tableScreen){
+  @media (min-width: $tableScreen) {
     width: 242px;
-    height: 242px; 
+    height: 242px;
     font-size: 2rem;
     margin: 100px auto 90px auto;
-    
   }
 
-  @media(min-width: $desktopScreen){
+  @media (min-width: $desktopScreen) {
     width: 275px;
-    height: 275px; 
+    height: 275px;
     margin: 0 auto;
-    position:relative;
+    position: relative;
     cursor: pointer;
-    
-    &::before{
-      content:" ";
-      position:absolute;
-      top:-80px;
-      width:450px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: -80px;
+      width: 450px;
       height: 450px;
       border-radius: 50%;
-      background:$mainWhite;
+      background: $mainWhite;
       opacity: 0;
-      transition:all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
-    &:hover::before{
+    &:hover::before {
       opacity: 0.1;
     }
   }
