@@ -25,14 +25,18 @@ a{
 
 .container{
     margin:0 24px;
-    max-width: 1600px;
-    margin:0 auto;
-   border:2px solid red;
+    //max-width: 1800px;
     @media(min-width: $tableScreen){
         margin:0 0 0 39px;  
     }
-    @media(min-width: $tableScreen){
+    @media(min-width: $desktopScreen){
         margin:0 0 0 55px;  
+    }
+
+    @media(min-width: 1800px)
+    {
+       margin-left:100px;
+       
     }
 }
 

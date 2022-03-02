@@ -16,10 +16,10 @@
 
 .home-page-hero-section {
   margin: 48px 0;
+ 
 
   @media(min-width: $desktopScreen)
   {
-     // border:2px solid red;
       margin-top:180px;
       display:flex;
       align-items: center;
@@ -31,6 +31,12 @@
          
       }
     
+  }
+
+  @media(min-width: 2000px)
+  {
+  
+  padding:0 250px;
   }
 }
 
@@ -67,13 +73,30 @@
     width: 242px;
     height: 242px; 
     font-size: 2rem;
-    margin: 156px auto 90px auto;
+    margin: 100px auto 90px auto;
+    
   }
 
-  @media(min-width: $tableScreen){
+  @media(min-width: $desktopScreen){
     width: 275px;
     height: 275px; 
-   
-    margin: 0;
+    margin: 0 auto;
+    position:relative;
+    cursor: pointer;
+    
+    &::before{
+      content:" ";
+      position:absolute;
+      top:-80px;
+      width:450px;
+      height: 450px;
+      border-radius: 50%;
+      background:$mainWhite;
+      opacity: 0;
+      transition:all 0.2s ease-in-out;
+    }
+    &:hover::before{
+      opacity: 0.1;
+    }
   }
 }

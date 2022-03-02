@@ -58,14 +58,14 @@
       position: absolute;
 
       top: 50%;
-      left: -425px;
+      left: -450px;
       background: rgba($mainWhite, 0.25);
       mix-blend-mode: normal;
       z-index: 10;
 
       @media (min-width: 1800px) {
-        width: 873px;
-        left: -780px;
+        width: 800px;
+        left: -750px;
       }
     }
   }
