@@ -10,4 +10,110 @@
       @media (min-width: 1430px) {
         @include getBackgroundImage('../assets/destination/background-destination-desktop.jpg');
       }
+
+    height:100vh;
 }
+
+.planet-image-container{
+ 
+  width:170px;
+  height:170px;
+  margin:32px auto;
+  img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @media(min-width: $tableScreen){
+    width: 300px;
+    height:300px;
+  }
+  @media(min-width: $desktopScreen){
+    width: 445px;
+    height:445px;
+  }
+
+}
+
+.info-destination-container{
+  //border:1px solid red;
+  .destination-menu{
+    //border:1px solid blue;
+    display:flex;
+    justify-content: center;
+    
+    li{
+      color:$mainPurple;
+      font-family: $secondaryFont;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 2.36px;
+      text-transform: uppercase;
+      margin-left:30px;
+      padding:8px 0;
+      cursor: pointer;
+    }
+    
+  }
+.destination-info{
+   
+  .destination-info-main-heading{
+    font-family: $primaryFont;
+    font-size: clamp( 3.5rem, 10.5vw, 6.25rem);
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color:$mainWhite;
+    margin-top:20px;
+  }
+}
+
+}
+
+.destination-distance-container{
+  border-top:1px solid #383B4B;
+  margin-top:32px;
+
+  & > *{
+    margin-top:32px;
+  }
+
+  .destination-distance-info{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+   
+     
+
+      h3{
+        font-family: $secondaryFont;
+        font-weight: 400;
+        font-style:normal;
+        color:$mainPurple;
+        text-transform: uppercase;
+        letter-spacing:2.36px;
+        font-size: 0.875rem;
+        margin-bottom: 12px;
+      }
+      p{
+        font-family: $primaryFont;
+        color:$mainWhite;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 1.75rem;
+      }
+
+      &:last-child{
+       
+        padding-bottom: 16px;
+        margin:0;
+        padding-top:24px;
+      }
+  }
+}
+

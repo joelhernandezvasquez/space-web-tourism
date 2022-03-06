@@ -15,6 +15,7 @@
 
 body{
     position:relative;
+    
 }
 
 ul{
@@ -27,7 +28,6 @@ a{
 
 .container{
     margin:0 24px;
-    //max-width: 1800px;
     @media(min-width: $tableScreen){
         margin:0 0 0 39px;  
     }
@@ -107,6 +107,26 @@ a{
 
 .bolder{
     font-family: $secondaryFont;
-    font-weight: bold;
-    
+    font-weight: bold; 
+    letter-spacing: 2.7px;
+}
+
+.lead-heading{
+    text-align: center;
+    font-family: $secondaryFont;
+    font-size: clamp( 1rem, 2.61vw, 1.75rem);
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    color:$mainWhite;
+    margin:32px 0;
+
+    .lead-sub-heading{
+        color:rgba($mainWhite,0.25);
+        font-weight: bold;
+        margin-right: 18px;
+        
+    }
+
 }
