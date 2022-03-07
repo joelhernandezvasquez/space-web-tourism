@@ -125,8 +125,19 @@ a{
     .lead-sub-heading{
         color:rgba($mainWhite,0.25);
         font-weight: bold;
-        margin-right: 18px;
-        
+        margin-right: 18px;   
+    }
+
+    @media(min-width: $tableScreen)
+    {
+        text-align: left;
+        margin:40px 0 60px 0;
+    }
+    @media(min-width: $desktopScreen)
+    {
+      
+        margin:76px 0px 97px 120px;
+      
     }
 
 }
