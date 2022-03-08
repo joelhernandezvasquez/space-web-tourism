@@ -3,10 +3,10 @@ import CloseIcon from '../assets/shared/icon-close.svg'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const MobileMenu = ({ open, closeMenu }) => {
+const MobileMenu = React.memo(({ open, closeMenu }) => {
   console.log('I am rendering again')
   return (
-    <div className={`mobile-menu ${open && 'show'}`}>
+    <div className={`mobile-menu ${open && 'show animate__animated animate__slideInRight'}`}>
       <div className='mobile-menu-close-icon-container'>
         <img src={CloseIcon} alt='close icon' onClick={closeMenu} />
       </div>
@@ -22,26 +22,26 @@ const MobileMenu = ({ open, closeMenu }) => {
         <li>
           {' '}
           <Link className='link' to='/destination'>
-            <span class='bolder'>01</span> Destination
+            <span className='bolder'>01</span> Destination
           </Link>
         </li>
         <li>
           {' '}
           <Link className='link' to='/crew'>
             {' '}
-            <span class='bolder'>02</span> Crew
+            <span className='bolder'>02</span> Crew
           </Link>
         </li>
         <li>
           {' '}
           <Link className='link' to='/technology'>
-            <span class='bolder'>03</span> Technology
+            <span className='bolder'>03</span> Technology
           </Link>
         </li>
       </ul>
     </div>
   )
-}
+})
 
 MobileMenu.propTypes = {
   open: PropTypes.bool,

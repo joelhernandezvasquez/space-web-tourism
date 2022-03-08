@@ -1,4 +1,4 @@
-
+import { useCallback} from 'react';
 import useToggle from './hooks/useToggle';
 import MenuIcon from '../assets/shared/icon-hamburger.svg';
 import MobileMenu from './MobileMenu';
@@ -8,6 +8,10 @@ import CloseIcon from '../assets/shared/icon-close.svg';
 const MobileNavigation = () => {
 
   const [toggle,handleToggle] = useToggle(false);
+
+  const closeMenu = useCallback(()=>{
+    handleToggle();
+  },[toggle])
 
   return (
     <>
@@ -19,8 +23,8 @@ const MobileNavigation = () => {
       />
     </div>
 
-     {/* this leads to memoization and useCallback refactoring  */}
-    <MobileMenu open = {toggle} closeMenu = {handleToggle}/>
+   
+    <MobileMenu  open = {toggle} closeMenu = {closeMenu}/>
     
     </>
   )

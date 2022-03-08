@@ -6,7 +6,7 @@ const DestinationInfo = ({currentDestination}) => {
 
   const {destinations} = Data;
   return (
-    <div className="destination-info">
+    <div className="destination-info animate__animated animate__fadeIn">
        
         <h1 className="destination-info-main-heading">{destinations[currentDestination].name}</h1>
         <p className="body-text">{destinations[currentDestination].description}</p>
