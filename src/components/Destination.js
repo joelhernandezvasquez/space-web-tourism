@@ -49,7 +49,7 @@ const Destination = () => {
           <div className='info-destination-container'>
              
              {/* This will be refactor to a apply some useCallbacka and useMemo */}
-            <DestinationTab setCurrentTab = {handleCounter}/>
+            <DestinationTab currentDestination = {currentDestination} setCurrentTab = {handleCounter}/>
             <DestinationInfo currentDestination = {currentDestination}/>
           </div>
        </div>

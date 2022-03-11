@@ -1,71 +1,196 @@
 @import './helper';
+@import './variables';
 
-.crew-wrapper{
-    @include getBackgroundImage('../assets/crew/background-crew-mobile.jpg');
-    
-    @media (min-width: $tableScreen) {
-        @include getBackgroundImage('../assets/crew/background-crew-tablet.jpg');
-      }
-      @media (min-width: 1430px) {
-        @include getBackgroundImage('../assets/crew/background-crew-desktop.jpg');
-      }
+.crew-wrapper {
+  @include getBackgroundImage('../assets/crew/background-crew-mobile.jpg');
 
-    height:100vh;
-}
-
-.crew-image-container{
-    
-    width:327px;
-    height:223px;
-    //border:1px solid red;
-    margin:0 auto;
-    display:flex;
-    justify-content: center;
-    position:relative;
-  
-    img{
+  @media (min-width: $tableScreen) {
+    @include getBackgroundImage('../assets/crew/background-crew-tablet.jpg');
     height:100%;
-    object-fit: cover;
-    object-position: center;
-   
-    }
-   
-    &::after{
-        content:"";
-        width:100%;
-        height:1px;
-        background:#383B4B;
-        position:absolute;
-        bottom:0;
+  
+  }
 
-        @media(min-width: $tableScreen){
-            display:none;
-        }
+  @media (min-width: 1430px) {
+    @include getBackgroundImage('../assets/crew/background-crew-desktop.jpg');
+    height:100%;
+   
+    .lead-heading{
+      margin-bottom: 20px;
+     
     }
-    @media(min-width: $tableScreen)
-    {
-        width:457px;
-        height:572px; 
-    }
-    @media(min-width: $desktopScreen){
-        width: 568px;
-        height:712px;
+  }
+
+
+  min-height:100vh;
+}
+
+.main-crew-container {
+  @media (min-width: $tableScreen) {
+    display: flex;
+    flex-direction: column;
+
+    .crew-image-container {
+      order: 2;
     }
 
+    .crew-information-container {
+      order: 1;
+    }
+  }
+  @media(min-width: $desktopScreen){
+     display:grid;
+     grid-template-columns: repeat(2,1fr);
     
-}
-.crew-information-container{
+     .crew-information-container{
+        margin-left:120px;
+        align-self: center;
+     }
+    
 
-   margin-top: 32px;
-.crew-menu-tab{
-   display:flex;
-   justify-content: center;
-    .dots{
-        width:10px;
-        height:10px;
-        border-radius: 50%;
-        background:rgba($mainWhite,0.17);
-       margin-right:16px;
-    }
+  }
 }
+
+.crew-image-container {
+  width: 327px;
+  height: 223px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+ 
+
+  img {
+    display:block;
+    //@at-root:100%;
+    height: 100%;
+    object-fit: contain;
+    //object-position: center;
+    @media(min-width:$desktopScreen){
+      //width:100%;
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #383b4b;
+    position: absolute;
+    bottom: 0;
+
+    @media (min-width: $tableScreen) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tableScreen) {
+    width: 457px;
+    height: 572px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktopScreen) {
+    width: 568px;
+    height: 712px;
+    margin:0;
+
+  }
+}
+
+.crew-information-container {
+  margin-top: 32px;
+
+  .crew-menu-tab {
+    display: flex;
+    justify-content: center;
+
+    .dots {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba($mainWhite, 0.17);
+      margin-right: 16px;
+      cursor: pointer;
+    }
+
+  @media(min-width: $desktopScreen)
+  {
+      justify-content: flex-start;
+      .dots {
+        width: 15px;
+        height: 15px;
+        margin-right: 24px;
+        margin-top:50px;
+      }
+  }
+  }
+
+  .crew-info-container {
+    margin-top: 32px;
+
+    :is(.crew-title, .crew-name) {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    .crew-title {
+      color: $mainWhite;
+      opacity: 0.5;
+      mix-blend-mode: normal;
+      font-size: clamp(1rem, 3.2vw, 2rem);
+    }
+
+    .crew-name {
+      color: $mainWhite;
+      font-size: clamp(1.5rem, 5.25vw, 3.5rem);
+      margin: 8px 0 16px 0;
+
+      @media(min-width: $desktopScreen)
+      {
+          margin:16px 0 27px 0;
+         text-align: left;
+      }
+    }
+  }
+
+  @media (min-width: $tableScreen) {
+    display: flex;
+    flex-direction: column;
+
+    .crew-info-container {
+      order: 1;
+      margin: 0;
+      width: 458px;
+      margin: 0 auto;
+
+      @media(min-width: $desktopScreen)
+      {
+          margin:0;
+          width:615px;
+          display:flex;
+          flex-direction: column;
+          align-items: flex-start;
+         
+          .body-text{
+            
+           width:444px;
+          }
+          
+      }
+    }
+
+    .crew-menu-tab {
+      order: 2;
+      margin-top: 40px;
+    }
+  }
+
+
+
+  .active-dot.dots {
+    background: $mainWhite;
+  }
 }

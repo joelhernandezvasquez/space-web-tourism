@@ -1,7 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-const CrewMenuTab = () => {
-
+const CrewMenuTab = ({activeDot,handleActiveDot}) => {
     const crewMenu = [
         {
             id:0  
@@ -19,11 +19,15 @@ const CrewMenuTab = () => {
   return (
     <div className='crew-menu-tab'>
      {crewMenu.map(({id})=>{
-      return <div key = {id} className='dots'></div>
+      return <div key = {id} className={`dots ${id===activeDot && 'active-dot'}`} onClick = {()=>handleActiveDot(id)}></div>
      })}
 
     </div>
   )
 }
+CrewMenuTab.propTypes = {
+   activeDot:PropTypes.number.isRequired,
+   handleActiveDot:PropTypes.func.isRequired
+  }
 
 export default CrewMenuTab
