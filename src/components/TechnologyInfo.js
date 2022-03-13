@@ -1,15 +1,25 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+import Data from '../Data/data.json';
 
-const TechnologyInfo = () => {
+const TechnologyInfo = ({currentTab}) => {
+ 
+  const {technology} = Data;
   return (
     <div className='technology-info-container'>
-       <h2 className='technology-title'>The Terminology</h2>
-       <h1 className='technology-action'>launch vehicle</h1>
+       <h2 className='technology-title'>The Terminology...</h2>
+       <h1 className='technology-action'>{technology[currentTab].name}</h1>
        <p className='body-text'>
-       A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+        {technology[currentTab].description}
         </p>
     </div>
   )
 }
+TechnologyInfo.propTypes = {
+  currentTab:PropTypes.number.isRequired,
+  
+}
+
+
 
 export default TechnologyInfo
