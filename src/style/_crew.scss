@@ -6,22 +6,19 @@
 
   @media (min-width: $tableScreen) {
     @include getBackgroundImage('../assets/crew/background-crew-tablet.jpg');
-    height:100%;
-  
+    height: 100%;
   }
 
   @media (min-width: 1430px) {
     @include getBackgroundImage('../assets/crew/background-crew-desktop.jpg');
-    height:100%;
-   
-    .lead-heading{
+    height: 100%;
+
+    .lead-heading {
       margin-bottom: 20px;
-     
     }
   }
 
-
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .main-crew-container {
@@ -37,16 +34,14 @@
       order: 1;
     }
   }
-  @media(min-width: $desktopScreen){
-     display:grid;
-     grid-template-columns: repeat(2,1fr);
-    
-     .crew-information-container{
-        margin-left:120px;
-        align-self: center;
-     }
-    
+  @media (min-width: $desktopScreen) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
+    .crew-information-container {
+      margin-left: 120px;
+      align-self: center;
+    }
   }
 }
 
@@ -57,17 +52,12 @@
   display: flex;
   justify-content: center;
   position: relative;
- 
 
   img {
-    display:block;
-    //@at-root:100%;
+    display: block;
     height: 100%;
     object-fit: contain;
-    //object-position: center;
-    @media(min-width:$desktopScreen){
-      //width:100%;
-    }
+   
   }
 
   &::after {
@@ -92,8 +82,7 @@
   @media (min-width: $desktopScreen) {
     width: 568px;
     height: 712px;
-    margin:0;
-
+    margin: 0;
   }
 }
 
@@ -113,16 +102,15 @@
       cursor: pointer;
     }
 
-  @media(min-width: $desktopScreen)
-  {
+    @media (min-width: $desktopScreen) {
       justify-content: flex-start;
       .dots {
         width: 15px;
         height: 15px;
         margin-right: 24px;
-        margin-top:50px;
+        margin-top: 50px;
       }
-  }
+    }
   }
 
   .crew-info-container {
@@ -148,10 +136,9 @@
       font-size: clamp(1.5rem, 5.25vw, 3.5rem);
       margin: 8px 0 16px 0;
 
-      @media(min-width: $desktopScreen)
-      {
-          margin:16px 0 27px 0;
-         text-align: left;
+      @media (min-width: $desktopScreen) {
+        margin: 16px 0 27px 0;
+        text-align: left;
       }
     }
   }
@@ -166,19 +153,16 @@
       width: 458px;
       margin: 0 auto;
 
-      @media(min-width: $desktopScreen)
-      {
-          margin:0;
-          width:615px;
-          display:flex;
-          flex-direction: column;
-          align-items: flex-start;
-         
-          .body-text{
-            
-           width:444px;
-          }
-          
+      @media (min-width: $desktopScreen) {
+        margin: 0;
+        width: 615px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .body-text {
+          width: 444px;
+        }
       }
     }
 
@@ -187,8 +171,6 @@
       margin-top: 40px;
     }
   }
-
-
 
   .active-dot.dots {
     background: $mainWhite;

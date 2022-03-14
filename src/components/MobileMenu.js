@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const MobileMenu = React.memo(({ open, closeMenu }) => {
   console.log('I am rendering again')
   return (
-    <div className={`mobile-menu ${open && 'show animate__animated animate__slideInRight'}`}>
+    <div className={`mobile-menu ${open && 'show'}`}>
       <div className='mobile-menu-close-icon-container'>
         <img src={CloseIcon} alt='close icon' onClick={closeMenu} />
       </div>

@@ -6,16 +6,32 @@
     @include getBackgroundImage('../assets/technology/background-technology-mobile.jpg');
 
     @media(min-width: $tableScreen){
-        @include getBackgroundImage('../assets/technology/background-technology-tablet.jpg')
+        @include getBackgroundImage('../assets/technology/background-technology-tablet.jpg');
     }
 
     @media(min-width: $desktopScreen){
-        @include getBackgroundImage('../assets/technology/background-technology-desktop.jpg')
+        @include getBackgroundImage('../assets/technology/background-technology-desktop.jpg');
+        height:100%;
     }
+    min-height: 100vh;
 }
 
 .main-technology-container{
-   
+   @media(min-width:$desktopScreen){
+      
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    padding-bottom: 10px;
+
+    .technology-image-container{
+        justify-self: end;
+        @media(min-width: 1800px)
+        {
+            justify-self: center;
+        }
+    }
+   }
 }
 
 .technology-image-container{
@@ -31,8 +47,24 @@
   {
       height:310px;
   }
+  @media(min-width: $desktopScreen){
+      order:2;
+      width:515px;
+      height:527px;
 
+      
+  }
+}
 
+.technology-information-container{
+    @media(min-width: $desktopScreen){
+        display:flex;
+        margin-left: 120px;
+       
+        :is(.technology-menu-tab,.technology-info-container){
+            margin-top:0;
+        }
+    }
 }
 
 .technology-menu-tab{
@@ -55,6 +87,16 @@
         font-weight: 400;
         font-style: normal;
         margin-left:16px;
+        cursor: pointer;
+
+        @media(min-width: $desktopScreen)
+        {
+            width:80px;
+            height:80px;
+            font-size: 2rem;
+            margin-left:0;
+            margin-bottom: 32px;
+        }
        
     }
     .active.technology-menu-dot{
@@ -65,6 +107,10 @@
     @media(min-width: $tableScreen)
     {
         margin-top: 56px;
+    }
+    @media(min-width: $desktopScreen){
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
@@ -81,6 +127,14 @@
     @media(min-width: $desktopScreen)
     {
         width: 475px;
+        margin-left: 80px;
+
+        :is(.technology-title,.technology-action){
+            text-align: left;
+        }
+        .body-text{
+            padding-right: 30px;
+        }
     }
 }
 .technology-title{
@@ -91,6 +145,7 @@
     text-align: center;
     font-weight: 400;
     letter-spacing: 2.36px;
+   
   
 }
 

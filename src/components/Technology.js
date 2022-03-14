@@ -2,27 +2,35 @@ import React from 'react'
 import Navigation from './Navigation';
 import TechnologyTab from './TechnologyTab';
 import UseCounterTab from './hooks/UseCounterTab';
+import UseScreen from './hooks/UseScreen';
 import VehicleLandscape from '../assets/technology/image-launch-vehicle-landscape.jpg';
+import VehiclePortrait from '../assets/technology/image-launch-vehicle-portrait.jpg';
 import SpaceportLandscape from '../assets/technology/image-spaceport-landscape.jpg';
+import SpaceportPortrait from '../assets/technology/image-spaceport-portrait.jpg';
 import SpaceCapsuleLandscape from '../assets/technology/image-space-capsule-landscape.jpg';
+import SpaceCapsulePortrait from '../assets/technology/image-space-capsule-portrait.jpg';
 import TechnologyInfo from './TechnologyInfo';
 
 const Technology = () => {
 
   const [currentTab,setCurrentTab] = UseCounterTab(0);
+  const screenWidth = UseScreen();
 
 const technologyImages = [
   {
     id:0,
-    landscapeImage:VehicleLandscape
+    landscapeImage:VehicleLandscape,
+    portraitImage:VehiclePortrait
   },
   {
     id:1,
-    landscapeImage:SpaceportLandscape
+    landscapeImage:SpaceportLandscape,
+    portraitImage:SpaceportPortrait
   },
   {
     id:2,
-    landscapeImage:SpaceCapsuleLandscape
+    landscapeImage:SpaceCapsuleLandscape,
+    portraitImage:SpaceCapsulePortrait
   }
 ]
   return (
@@ -39,7 +47,8 @@ const technologyImages = [
        
        <div className='main-technology-container'>
          <div className='technology-image-container'>
-            <img src={technologyImages[currentTab].landscapeImage} alt = "space"/>
+            <img src={ screenWidth < 1440 ? technologyImages[currentTab].landscapeImage: technologyImages[currentTab].portraitImage}
+             alt = "space"/>
           </div>
           
           <div className='container'>
