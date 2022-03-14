@@ -1,185 +1,188 @@
 @import './helper';
 
-.destination-wrapper{
+.destination-wrapper {
 
-    @include getBackgroundImage('../assets/destination/background-destination-mobile.jpg');
-    
-    @media (min-width: $tableScreen) {
-        @include getBackgroundImage('../assets/destination/background-destination-tablet.jpg');
-      }
-      @media (min-width: 1430px) {
-        @include getBackgroundImage('../assets/destination/background-destination-desktop.jpg');
-      }
+  @include getBackgroundImage('../assets/destination/background-destination-mobile.jpg');
 
-    height:100vh;
+  @media (min-width: $tableScreen) {
+    @include getBackgroundImage('../assets/destination/background-destination-tablet.jpg');
+  }
+
+  @media (min-width: 1430px) {
+    @include getBackgroundImage('../assets/destination/background-destination-desktop.jpg');
+  }
+
+  height:100vh;
 }
 
-.planet-image-container{
- 
-  width:170px;
-  height:170px;
-  margin:32px auto;
-  img{
-    width:100%;
-    height:100%;
+.planet-image-container {
+
+  width: 170px;
+  height: 170px;
+  margin: 32px auto;
+
+  img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  @media(min-width: $tableScreen){
+  @media(min-width: $tableScreen) {
     width: 300px;
-    height:300px;
+    height: 300px;
   }
-  @media(min-width: $desktopScreen){
+
+  @media(min-width: $desktopScreen) {
     width: 445px;
-    height:445px;
+    height: 445px;
   }
 
 }
 
-.info-destination-container{
- 
-  .destination-menu{
-    display:flex;
+.info-destination-container {
+
+  .destination-menu {
+    display: flex;
     justify-content: center;
-    
-    li{
-      color:$mainPurple;
+
+    li {
+      color: $mainPurple;
       font-family: $secondaryFont;
       font-size: 0.875rem;
       font-style: normal;
       font-weight: 400;
       letter-spacing: 2.36px;
       text-transform: uppercase;
-      margin-left:30px;
-      padding:8px 0;
+      margin-left: 30px;
+      padding: 8px 0;
       cursor: pointer;
 
-      @media(min-width: $tableScreen)
-      {
+      @media(min-width: $tableScreen) {
         font-size: 1rem;
-        margin-left:35px;
+        margin-left: 35px;
       }
-      @media(min-width: $desktopScreen)
-      {
-      
-        margin-left:0;
+
+      @media(min-width: $desktopScreen) {
+
+        margin-left: 0;
         margin-right: 35px;
       }
-      
-    }
-    
-  }
-.destination-info{
- 
-  .destination-info-main-heading{
-    font-family: $primaryFont;
-    font-size: clamp( 3.5rem, 10.5vw, 6.25rem);
-    font-style: normal;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    color:$mainWhite;
-    margin-top: clamp( 20px, 4.1vw, 2.3rem);
 
-    @media(min-width: $desktopScreen)
-    {
-      text-align: left;
     }
 
   }
-  .body-text{
-    @media(min-width: $tableScreen){
-    margin:8px 70px 0 70px;
+
+  .destination-info {
+
+    .destination-info-main-heading {
+      font-family: $primaryFont;
+      font-size: clamp(3.5rem, 10.5vw, 6.25rem);
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      color: $mainWhite;
+      margin-top: clamp(20px, 4.1vw, 2.3rem);
+
+      @media(min-width: $desktopScreen) {
+        text-align: left;
+      }
+
     }
 
-    @media(min-width: $desktopScreen)
-    {
-      margin-left:0;
-      margin-right: 0;
+    .body-text {
+      @media(min-width: $tableScreen) {
+        margin: 8px 70px 0 70px;
+      }
+
+      @media(min-width: $desktopScreen) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
+
+  }
+
+  @media(min-width: $desktopScreen) {
+
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
   }
 
 }
-@media(min-width: $desktopScreen)
-{
- 
-  width:480px;
-  display:flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
-}
 
-}
-
-.destination-distance-container{
-  border-top:1px solid #383B4B;
-  margin-top: clamp( 32px, 6.3vw, 3.375rem);
-  margin-left:70px;
+.destination-distance-container {
+  border-top: 1px solid #383B4B;
+  margin-top: clamp(32px, 6.3vw, 3.375rem);
+  margin-left: 70px;
   margin-right: 70px;
-  & > *{
-    margin-top:32px;
-    @media(min-width: $tableScreen)
-    {
+
+  &>* {
+    margin-top: 32px;
+
+    @media(min-width: $tableScreen) {
       margin-top: 0;
     }
   }
 
-  .destination-distance-info{
-      display:flex;
-      flex-direction: column;
-      align-items: center;
-   
-      h3{
-        font-family: $secondaryFont;
-        font-weight: 400;
-        font-style:normal;
-        color:$mainPurple;
-        text-transform: uppercase;
-        letter-spacing:2.36px;
-        font-size: 0.875rem;
-        margin-bottom: 12px;
-      }
-      p{
-        font-family: $primaryFont;
-        color:$mainWhite;
-        font-style: normal;
-        font-weight: normal;
-        text-transform: uppercase;
-        font-size: 1.75rem;
-      }
+  .destination-distance-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-      &:last-child{
-       
-        padding-bottom: 16px;
-        margin:0;
-        padding-top:24px;
-        @media(min-width: $tableScreen)
-        {
-          padding:0;
-          margin-left:48px;
-        }
-      }
-  }
-
-  @media(min-width: $tableScreen)
-  {
-    display:flex;
-    justify-content: center;
-    padding-top:29px;
-    .destination-distance-info{
-   
-      margin-right:48px;
-      
+    h3 {
+      font-family: $secondaryFont;
+      font-weight: 400;
+      font-style: normal;
+      color: $mainPurple;
+      text-transform: uppercase;
+      letter-spacing: 2.36px;
+      font-size: 0.875rem;
+      margin-bottom: 12px;
     }
-   
+
+    p {
+      font-family: $primaryFont;
+      color: $mainWhite;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 1.75rem;
+    }
+
+    &:last-child {
+
+      padding-bottom: 16px;
+      margin: 0;
+      padding-top: 24px;
+
+      @media(min-width: $tableScreen) {
+        padding: 0;
+        margin-left: 48px;
+      }
+    }
   }
-  @media(min-width:$desktopScreen)
-  {
-    margin-left:0;
+
+  @media(min-width: $tableScreen) {
+    display: flex;
+    justify-content: center;
+    padding-top: 29px;
+
+    .destination-distance-info {
+
+      margin-right: 48px;
+
+    }
+
+  }
+
+  @media(min-width:$desktopScreen) {
+    margin-left: 0;
     margin-right: 0;
     justify-content: flex-start;
   }
 }
-

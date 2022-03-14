@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-const DestinationTab = ({currentDestination, setCurrentTab }) => {
-
+const DestinationTab = ({ currentDestination, setCurrentTab }) => {
   const destinations = [
     {
       id: 0,
@@ -22,14 +21,14 @@ const DestinationTab = ({currentDestination, setCurrentTab }) => {
     }
   ]
 
-  
   return (
     <ul className='destination-menu'>
       {destinations.map(({ id, name }) => {
         return (
           <li
             key={id}
-            className={`destination-items ${id === currentDestination && 'active-link'}`}
+            className={`destination-items ${id === currentDestination &&
+              'active-link'}`}
             onClick={() => setCurrentTab(id)}
           >
             {name}
@@ -41,7 +40,7 @@ const DestinationTab = ({currentDestination, setCurrentTab }) => {
 }
 
 DestinationTab.propTypes = {
-  currentDestination:PropTypes.number.isRequired,
+  currentDestination: PropTypes.number.isRequired,
   setCurrentTab: PropTypes.func.isRequired
 }
 

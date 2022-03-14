@@ -10,9 +10,7 @@ const Navigation = props => {
   return (
     <nav className='navigation-container'>
       <img className='logo-icon' src={Logo} alt='logo' />
- 
-     
-      {screenSize < 767 ? <MobileNavigation /> : <DesktopNavigation />}
+       {screenSize < 767 ? <MobileNavigation /> : <DesktopNavigation />}
     </nav>
   )
 }

@@ -1,176 +1,162 @@
-
 @import './variables';
 @import './helper';
 
-.technology-wrapper{
-    @include getBackgroundImage('../assets/technology/background-technology-mobile.jpg');
+.technology-wrapper {
+  @include getBackgroundImage(
+    '../assets/technology/background-technology-mobile.jpg'
+  );
 
-    @media(min-width: $tableScreen){
-        @include getBackgroundImage('../assets/technology/background-technology-tablet.jpg');
-    }
+  @media (min-width: $tableScreen) {
+    @include getBackgroundImage(
+      '../assets/technology/background-technology-tablet.jpg'
+    );
+  }
 
-    @media(min-width: $desktopScreen){
-        @include getBackgroundImage('../assets/technology/background-technology-desktop.jpg');
-        height:100%;
-    }
-    min-height: 100vh;
+  @media (min-width: $desktopScreen) {
+    @include getBackgroundImage(
+      '../assets/technology/background-technology-desktop.jpg'
+    );
+    height: 100%;
+  }
+  min-height: 100vh;
 }
 
-.main-technology-container{
-   @media(min-width:$desktopScreen){
-      
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+.main-technology-container {
+  @media (min-width: $desktopScreen) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     padding-bottom: 10px;
 
-    .technology-image-container{
-        justify-self: end;
-        @media(min-width: 1800px)
-        {
-            justify-self: center;
-        }
+    .technology-image-container {
+      justify-self: end;
+      @media (min-width: 1800px) {
+        justify-self: center;
+      }
     }
-   }
-}
-
-.technology-image-container{
-  height:170px;
-
-  img{
-      width: 100%;
-      height:100%;
-      object-fit: cover;
-  }
-
-  @media(min-width: $tableScreen)
-  {
-      height:310px;
-  }
-  @media(min-width: $desktopScreen){
-      order:2;
-      width:515px;
-      height:527px;
-
-      
   }
 }
 
-.technology-information-container{
-    @media(min-width: $desktopScreen){
-        display:flex;
-        margin-left: 120px;
-       
-        :is(.technology-menu-tab,.technology-info-container){
-            margin-top:0;
-        }
+.technology-image-container {
+  height: 170px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: $tableScreen) {
+    height: 310px;
+  }
+  @media (min-width: $desktopScreen) {
+    order: 2;
+    width: 515px;
+    height: 527px;
+  }
+}
+
+.technology-information-container {
+  @media (min-width: $desktopScreen) {
+    display: flex;
+    margin-left: 120px;
+
+    :is(.technology-menu-tab, .technology-info-container) {
+      margin-top: 0;
     }
+  }
 }
 
-.technology-menu-tab{
-    margin-top:34px;
-    display:flex;
+.technology-menu-tab {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+
+  .technology-menu-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba($mainWhite, 0.25);
+    display: flex;
+    align-items: center;
     justify-content: center;
-
-
-    .technology-menu-dot{
-        width:40px;
-        height:40px;
-        border-radius: 50%;
-        border:1px solid rgba($mainWhite,0.25);
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
-        color:$mainWhite;
-        font-family: $primaryFont;
-        font-weight: 400;
-        font-style: normal;
-        margin-left:16px;
-        cursor: pointer;
-
-        @media(min-width: $desktopScreen)
-        {
-            width:80px;
-            height:80px;
-            font-size: 2rem;
-            margin-left:0;
-            margin-bottom: 32px;
-        }
-       
-    }
-    .active.technology-menu-dot{
-        background:$mainWhite;
-        color:#0B0D17;
-    }
-
-    @media(min-width: $tableScreen)
-    {
-        margin-top: 56px;
-    }
-    @media(min-width: $desktopScreen){
-        flex-direction: column;
-        justify-content: space-between;
-    }
-}
-
-.technology-info-container{
-    margin-top:26px;
-
-    @media(min-width: $tableScreen)
-    {
-        margin-top:44px;
-        width:458px;
-        margin-left:auto;
-        margin-right: auto;
-    }
-    @media(min-width: $desktopScreen)
-    {
-        width: 475px;
-        margin-left: 80px;
-
-        :is(.technology-title,.technology-action){
-            text-align: left;
-        }
-        .body-text{
-            padding-right: 30px;
-        }
-    }
-}
-.technology-title{
-    color:$mainPurple;
-    font-family: $secondaryFont;
-    font-size: clamp( 0.875rem ,3vw, 1rem );
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 400;
-    letter-spacing: 2.36px;
-   
-  
-}
-
-.technology-action{
-    text-align:center;
-    color:$mainWhite;
+    font-size: 1rem;
+    color: $mainWhite;
     font-family: $primaryFont;
-    font-size: clamp(1.5rem, 5.3vw, 3.5rem);
-    font-style: normal;
     font-weight: 400;
-    text-transform: uppercase;
-    margin-top:9px;
-    margin-bottom: 16px;
-    
-    @media(min-width: $tableScreen)
-    { 
-        margin-top:16px
-    }
-      
-    @media(min-width: $desktopScreen)
-    { 
-        margin-top:11px
-    }
-    
+    font-style: normal;
+    margin-left: 16px;
+    cursor: pointer;
 
+    @media (min-width: $desktopScreen) {
+      width: 80px;
+      height: 80px;
+      font-size: 2rem;
+      margin-left: 0;
+      margin-bottom: 32px;
+    }
+  }
+  .active.technology-menu-dot {
+    background: $mainWhite;
+    color: #0b0d17;
+  }
+
+  @media (min-width: $tableScreen) {
+    margin-top: 56px;
+  }
+  @media (min-width: $desktopScreen) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
+.technology-info-container {
+  margin-top: 26px;
 
+  @media (min-width: $tableScreen) {
+    margin-top: 44px;
+    width: 458px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: $desktopScreen) {
+    width: 475px;
+    margin-left: 80px;
+
+    :is(.technology-title, .technology-action) {
+      text-align: left;
+    }
+    .body-text {
+      padding-right: 30px;
+    }
+  }
+}
+.technology-title {
+  color: $mainPurple;
+  font-family: $secondaryFont;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 2.36px;
+}
+
+.technology-action {
+  text-align: center;
+  color: $mainWhite;
+  font-family: $primaryFont;
+  font-size: clamp(1.5rem, 5.3vw, 3.5rem);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 9px;
+  margin-bottom: 16px;
+
+  @media (min-width: $tableScreen) {
+    margin-top: 16px;
+  }
+
+  @media (min-width: $desktopScreen) {
+    margin-top: 11px;
+  }
+}

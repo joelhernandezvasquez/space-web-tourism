@@ -1,4 +1,3 @@
-
 @import './home.scss';
 @import './destination';
 @import './crew';
@@ -9,140 +8,126 @@
 @import './variables';
 @import './helper';
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-body{
-    min-height:100vh;
+body {
+  min-height: 100vh;
 }
 
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.container{
-    margin:0 24px;
-   
-  
-    @media(min-width: $tableScreen){
-        margin:0 0 0 39px;  
-    }
-    @media(min-width: $desktopScreen){
-        margin:0 0 0 55px;  
-    }
+.container {
+  margin: 0 24px;
 
-    @media(min-width: 1800px)
-    {
-       margin-left:100px;
-       
-    }
+  @media (min-width: $tableScreen) {
+    margin: 0 0 0 39px;
+  }
+  @media (min-width: $desktopScreen) {
+    margin: 0 0 0 55px;
+  }
+
+  @media (min-width: 1800px) {
+    margin-left: 100px;
+  }
 }
 
-.logo-icon{
-    width: 40px;
-    height: 40px;
+.logo-icon {
+  width: 40px;
+  height: 40px;
 
-    @media(min-width: $tableScreen){
-        width: 48px;
-        height:48px;
-    }
-    
+  @media (min-width: $tableScreen) {
+    width: 48px;
+    height: 48px;
+  }
 }
 
-.lg-heading{
-    font-size: 5rem;
-    text-transform: uppercase;
-    color:$mainWhite;
-    line-height: 100px;
-    text-align: center;
-    font-family: $primaryFont;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: clamp(16px, 7vw, 4rem); 
-    margin-bottom:clamp(16px, 7vw, 4rem); 
+.lg-heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: $mainWhite;
+  line-height: 100px;
+  text-align: center;
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: clamp(16px, 7vw, 4rem);
+  margin-bottom: clamp(16px, 7vw, 4rem);
 
-    @media(min-width: $tableScreen){
-        font-size: 9.375rem;
-    }
-   
+  @media (min-width: $tableScreen) {
+    font-size: 9.375rem;
+  }
 }
 
-.sm-heading{
- color:$mainPurple;
- font-family:$secondaryFont;
- font-size: clamp(1rem, 2.6vw, 1.75rem); 
- text-transform: uppercase;
- font-weight: 400;
- text-align: center;
- letter-spacing: 2.7px;
+.sm-heading {
+  color: $mainPurple;
+  font-family: $secondaryFont;
+  font-size: clamp(1rem, 2.6vw, 1.75rem);
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.7px;
 
- @media(min-width: $desktopScreen)
- {
-     text-align: left;
- }
-
+  @media (min-width: $desktopScreen) {
+    text-align: left;
+  }
 }
 
-.body-text{
-    color:$mainPurple;
-    font-size: clamp( 0.9375rem, 2.1vw, 1.125rem); 
-    font-family: $ternaryFont;
-    font-style: normal;
-    font-weight: normal;
-    text-align:center;
-    line-height: 25px;
+.body-text {
+  color: $mainPurple;
+  font-size: clamp(0.9375rem, 2.1vw, 1.125rem);
+  font-family: $ternaryFont;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  line-height: 25px;
 
-    @media(min-width: $tableScreen)
-    { line-height: 28px;}
-    @media(min-width: $desktopScreen)
-    { 
-        line-height: 32px;
-        text-align: left;
-    }
+  @media (min-width: $tableScreen) {
+    line-height: 28px;
+  }
+  @media (min-width: $desktopScreen) {
+    line-height: 32px;
+    text-align: left;
+  }
 }
 
-.bolder{
-    font-family: $secondaryFont;
-    font-weight: bold; 
-    letter-spacing: 2.7px;
+.bolder {
+  font-family: $secondaryFont;
+  font-weight: bold;
+  letter-spacing: 2.7px;
 }
 
-.lead-heading{
-    text-align: center;
-    font-family: $secondaryFont;
-    font-size: clamp( 1rem, 2.61vw, 1.75rem);
-    font-style: normal;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 2.7px;
-    color:$mainWhite;
-    margin:32px 0;
+.lead-heading {
+  text-align: center;
+  font-family: $secondaryFont;
+  font-size: clamp(1rem, 2.61vw, 1.75rem);
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  color: $mainWhite;
+  margin: 32px 0;
 
-    .lead-sub-heading{
-        color:rgba($mainWhite,0.25);
-        font-weight: bold;
-        margin-right: 18px;   
-    }
+  .lead-sub-heading {
+    color: rgba($mainWhite, 0.25);
+    font-weight: bold;
+    margin-right: 18px;
+  }
 
-    @media(min-width: $tableScreen)
-    {
-        text-align: left;
-        margin:40px 0 60px 0;
-    }
-    @media(min-width: $desktopScreen)
-    {
-      
-        margin:76px 0px 97px 120px;
-      
-    }
-
+  @media (min-width: $tableScreen) {
+    text-align: left;
+    margin: 40px 0 60px 0;
+  }
+  @media (min-width: $desktopScreen) {
+    margin: 76px 0px 97px 120px;
+  }
 }

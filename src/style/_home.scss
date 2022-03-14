@@ -2,7 +2,6 @@
 @import './helper';
 
 .home_wrapper {
-
   @include getBackgroundImage('../assets/home/background-home-mobile.jpg');
 
   @media (min-width: $tableScreen) {

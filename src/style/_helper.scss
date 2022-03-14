@@ -1,27 +1,20 @@
-
 @mixin getBackgroundImage($imageUrl) {
-    
-    background-image: url($imageUrl);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height:100vh;
-    //height:100vh;
-
-
-    
+  background-image: url($imageUrl);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+ 
 }
 
-.col2-container{
- 
-    @media(min-width:$desktopScreen){
-
-        display:grid;
-        grid-template-columns: repeat(2,1fr);
-        justify-items: center;
-    }
+.col2-container {
+  @media (min-width: $desktopScreen) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 }
 
 .active-link {
-    border-bottom: 3px solid $mainWhite;
-  }
+  border-bottom: 3px solid $mainWhite;
+}

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const MobileMenu = React.memo(({ open, closeMenu }) => {
-  console.log('I am rendering again')
   return (
     <div className={`mobile-menu ${open && 'show'}`}>
       <div className='mobile-menu-close-icon-container'>
@@ -16,7 +15,7 @@ const MobileMenu = React.memo(({ open, closeMenu }) => {
           {' '}
           <Link className='link' to='/'>
             {' '}
-            <span class='bolder'>00</span> Home
+            <span className='bolder'>00</span> Home
           </Link>
         </li>
         <li>
