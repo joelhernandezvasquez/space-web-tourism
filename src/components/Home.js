@@ -6,8 +6,11 @@ const Home = () => {
   return (
     <div className='home_wrapper'>
       <div className='container'>
+        <header>
         <Navigation />
-        <section className='home-page-hero-section'>
+        </header>
+        {/* <section className='home-page-hero-section'> */}
+        <section className='home-page-hero-section col2-container'>
           <div className='left-col'>
             <h3 className='sm-heading'>so, you want to travel to</h3>
             <h1 className='lg-heading'> space</h1>
@@ -20,7 +23,7 @@ const Home = () => {
           </div>
 
           <div className='right-col'>
-            <div className='explore-btn'>explore</div>
+            <div className='explore-btn flex-center uppercase fs-primary-font'>explore</div>
           </div>
         </section>
       </div>

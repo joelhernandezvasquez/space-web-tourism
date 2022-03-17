@@ -16,14 +16,20 @@
   margin: 48px 0;
 
   @media (min-width: $desktopScreen) {
-    margin-top: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 150px;
-
-    .left-col {
-      margin: 0;
+    margin-top: 80px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // padding: 0 150px;
+   
+    .left-col{
+      grid-column: 2/3;
+    }
+    .right-col {
+   
+     grid-column: 3/4;
+      align-self: center;
+       margin-top:200px;
     }
   }
 
@@ -48,22 +54,18 @@
   height: 150px;
   border-radius: 50%;
   background: $mainWhite;
-  font-family: $primaryFont;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.25rem;
+  font-size: $fs-400;
   text-align: center;
   color: $mainBlack;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 80px auto 48px auto;
+  aspect-ratio: 1;
 
   @media (min-width: $tableScreen) {
     width: 242px;
     height: 242px;
-    font-size: 2rem;
+    font-size: $fs-600;
     margin: 100px auto 90px auto;
   }
 
@@ -72,21 +74,25 @@
     height: 275px;
     margin: 0 auto;
     position: relative;
+    z-index:1;
     cursor: pointer;
 
-    &::before {
+    &::after {
       content: ' ';
       position: absolute;
-      top: -80px;
-      width: 450px;
-      height: 450px;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       background: $mainWhite;
+      z-index:-1;
       opacity: 0;
-      transition: all 0.3s ease-in-out;
+      transition: opacity 500ms ease-in-out, transform 750ms ease-in-out;
     }
-    &:hover::before {
-      opacity: 0.1;
+    &:hover::after,
+    &:hover:focus:after
+    {
+      opacity: 0.15;
+      transform:scale(1.5);
     }
   }
 }

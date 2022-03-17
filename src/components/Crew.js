@@ -42,7 +42,7 @@ const Crew = () => {
           meet your crew
         </h1>
 
-        <div className='main-crew-container'>
+        <div className='col2-container main-crew-container'>
           <div className='crew-image-container'>
             <img src={crewImages[activeDot].image} alt='crew members' />
           </div>

@@ -1,3 +1,63 @@
+@import './variables';
+
+/* ---------------*
+/*  Utility classes */
+/* ---------------*/
+
+.flex{
+  display:flex;
+  gap:$gap;
+}
+.flex-center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid{
+  display:grid;
+  gap:$gap;
+}
+
+
+
+// .container {
+//   padding-inline: 2em;
+//   margin-inline: auto;
+//   max-width: 60rem;
+// }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-primary-font{
+  font-family: $primaryFont;
+}
+.fs-secondary-font{
+  font-family: $secondaryFont;
+}
+.fs-ternary-font{
+  font-family: $ternaryFont;
+}
+
+
+
 @mixin getBackgroundImage($imageUrl) {
   background-image: url($imageUrl);
   background-size: cover;
@@ -10,11 +70,18 @@
 .col2-container {
   @media (min-width: $desktopScreen) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-columns: minmax(0,40px) repeat(2,minmax(0,800px)) minmax(0,40px);
+    align-items: center;
+    column-gap: 40px;
+    //border:1px solid red;
+    
+    // grid-template-columns: repeat(2, 1fr);
+    // justify-items: center;
   }
 }
 
 .active-link {
   border-bottom: 3px solid $mainWhite;
 }
+
+

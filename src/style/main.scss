@@ -8,15 +8,70 @@
 @import './variables';
 @import './helper';
 
-* {
-  margin: 0;
-  padding: 0;
+/* ---------------*
+/*  Reset */
+/* ---------------*/
+
+/* Box Sizing */
+
+*,
+*::before,
+*::after{
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
+/* Reset Margins*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture
+ {
+  margin: 0;
 }
+
+
+/* set up the body*/
+body {
+  
+  line-height:1.5;
+  min-height: 100vh;
+  display:grid;
+
+}
+
+/* make images easier to work with*/
+img,
+picture{
+  max-width: 100%;
+  display:block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 ul {
   list-style-type: none;
@@ -109,7 +164,7 @@ a {
 .lead-heading {
   text-align: center;
   font-family: $secondaryFont;
-  font-size: clamp(1rem, 2.61vw, 1.75rem);
+  font-size: clamp(1rem, 2.61vw, 2rem);
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
@@ -128,6 +183,6 @@ a {
     margin: 40px 0 60px 0;
   }
   @media (min-width: $desktopScreen) {
-    margin: 76px 0px 97px 120px;
+    margin: 76px 0px 20px 120px;
   }
 }
