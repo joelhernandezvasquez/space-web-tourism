@@ -9,7 +9,6 @@ const Home = () => {
         <header>
         <Navigation />
         </header>
-        {/* <section className='home-page-hero-section'> */}
         <section className='home-page-hero-section col2-container'>
           <div className='left-col'>
             <h3 className='sm-heading'>so, you want to travel to</h3>

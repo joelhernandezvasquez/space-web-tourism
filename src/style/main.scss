@@ -41,6 +41,7 @@ body {
   
   line-height:1.5;
   min-height: 100vh;
+  position:relative;
   display:grid;
 
 }
@@ -96,6 +97,9 @@ a {
   }
 }
 
+// make
+
+
 .logo-icon {
   width: 40px;
   height: 40px;
@@ -107,7 +111,7 @@ a {
 }
 
 .lg-heading {
-  font-size: 5rem;
+  font-size: $fs-800;
   text-transform: uppercase;
   color: $mainWhite;
   line-height: 100px;
@@ -126,7 +130,7 @@ a {
 .sm-heading {
   color: $mainPurple;
   font-family: $secondaryFont;
-  font-size: clamp(1rem, 2.6vw, 1.75rem);
+  font-size: clamp($fs-300, 2.6vw, $fs-500);
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
@@ -139,12 +143,13 @@ a {
 
 .body-text {
   color: $mainPurple;
-  font-size: clamp(0.9375rem, 2.1vw, 1.125rem);
+  font-size: clamp(0.9375rem, 2.1vw, $fs-400);
   font-family: $ternaryFont;
   font-style: normal;
   font-weight: normal;
   text-align: center;
   line-height: 25px;
+  max-width:470px;
 
   @media (min-width: $tableScreen) {
     line-height: 28px;
@@ -164,7 +169,7 @@ a {
 .lead-heading {
   text-align: center;
   font-family: $secondaryFont;
-  font-size: clamp(1rem, 2.61vw, 2rem);
+  font-size: clamp($fs-300, 2.61vw, $fs-600);
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;

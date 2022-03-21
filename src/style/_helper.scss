@@ -61,7 +61,7 @@
 @mixin getBackgroundImage($imageUrl) {
   background-image: url($imageUrl);
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   height: 100vh;
  
@@ -73,13 +73,13 @@
     grid-template-columns: minmax(0,40px) repeat(2,minmax(0,800px)) minmax(0,40px);
     align-items: center;
     column-gap: 40px;
-    //border:1px solid red;
-    
-    // grid-template-columns: repeat(2, 1fr);
-    // justify-items: center;
   }
 }
 
+.flex-even-columns > *{
+  display:flex;
+  width:100%;
+}
 .active-link {
   border-bottom: 3px solid $mainWhite;
 }

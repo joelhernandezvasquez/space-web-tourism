@@ -9,10 +9,16 @@ $primaryFont:'Bellefair', serif;
 $secondaryFont:'Barlow Condensed', 'sans-serif';
 $ternaryFont:'Barlow', sans-serif;
 
+
+$tableScreen:767px;
+$desktopScreen:1439px;
+$gap:1rem;   
+
     
 /* font-sizes */
-    $fs-900: 9.375rem;
-    $fs-800: 6.25rem;
+    $fs-1000: 9.375rem;
+    $fs-900: 6.25rem;
+    $fs-800:5rem;
     $fs-700: 3.5rem;
     $fs-600: 2rem;
     $fs-500: 1.75rem;
@@ -21,10 +27,6 @@ $ternaryFont:'Barlow', sans-serif;
     $fs-200: 0.875rem;
 
 
-    
-
-$tableScreen:767px;
-$desktopScreen:1439px;
 
 
-$gap:1rem;
+
